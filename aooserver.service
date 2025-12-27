@@ -1,0 +1,11 @@
+[Unit]
+Description=Start AOO Server at boot
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/aooserver
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

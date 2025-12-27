@@ -30,4 +30,6 @@ jobs:
           name: AOO-server-${{ runner.os }}
           path: |
             Builds/LinuxMakefile/build/aooserver
+            install.sh
+            aooserver.service
 
