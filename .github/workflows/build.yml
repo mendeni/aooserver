@@ -24,7 +24,7 @@ jobs:
           cd Builds/LinuxMakefile
           CONFIG=Release make
 
-      - name: Prep aooserver
+      - name: Prep artefacts
         run: |
           cp Builds/LinuxMakefile/build/aooserver ./aooserver
           chmod 755 ./aooserver
