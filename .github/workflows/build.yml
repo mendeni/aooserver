@@ -29,7 +29,7 @@ jobs:
           cp Builds/LinuxMakefile/build/aooserver ./aooserver
           chmod 755 ./aooserver
 
-      - name: Upload Sonobus_artefacts
+      - name: Upload artefacts
         uses: actions/upload-artifact@v4
         with:
           name: AOO-server-${{ runner.os }}
