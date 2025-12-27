@@ -24,12 +24,17 @@ jobs:
           cd Builds/LinuxMakefile
           CONFIG=Release make
 
+      - name: Prep aooserver
+        run: |
+          cp Builds/LinuxMakefile/build/aooserver ./aooserver
+          chmod 755 ./aooserver
+
       - name: Upload Sonobus_artefacts
         uses: actions/upload-artifact@v4
         with:
           name: AOO-server-${{ runner.os }}
           path: |
-            Builds/LinuxMakefile/build/aooserver
+            aooserver
             install.sh
             aooserver.service
 
